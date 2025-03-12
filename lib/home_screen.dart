@@ -1,11 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quiz_app/components/security_tips.dart';
-import 'package:quiz_app/components/text_column.dart';
-import 'package:quiz_app/service/ai_service/ai_service.dart';
+
 
 import '../models/cyber_crime_model.dart';
+import 'components/security_tips.dart';
+import 'components/text_column.dart';
+import 'service/ai_service/ai_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,33 +16,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0;
-  final List<Widget> _widgetOptions = <Widget>[
-    // Remove the 'static const' keywords
-    const WidgetOne(key: PageStorageKey('widget-one')),
-  ];
-
-  // Add PageStorage to maintain state
-  final PageStorageBucket _bucket = PageStorageBucket();
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
+    return const Scaffold(
+      backgroundColor: Colors.blueAccent,
       body: SafeArea(
         child: SingleChildScrollView(
           child: DefaultTabController(
             length: 2,
-            child: IndexedStack(
-              index: _selectedIndex, // This ensures widgets are not rebuilt
-              children: _widgetOptions,
-            ),
+            child:  WidgetOne(key: PageStorageKey('widget-one')),
+            
           ),
         ),
       ),
@@ -104,11 +89,11 @@ class _WidgetOneState extends State<WidgetOne>
         });
       }
     } catch (e) {
-      print("Error fetching data: $e");
-      if (mounted)
+      if (mounted) {
         setState(() {
           _isLoading = false;
         });
+      }
     }
   }
 
@@ -136,7 +121,7 @@ class _WidgetOneState extends State<WidgetOne>
           child: Container(
             height: 45,
             decoration: BoxDecoration(
-              color: Color(0XFF989494),
+              color: const Color(0XFF989494),
               borderRadius: BorderRadius.circular(9.0),
             ),
             child: TabBar(
@@ -157,9 +142,9 @@ class _WidgetOneState extends State<WidgetOne>
           ),
         ),
         if (_isLoading)
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height * 0.5,
-            child: Center(
+            child: const Center(
               child: CircularProgressIndicator(color: Colors.white),
             ),
           )

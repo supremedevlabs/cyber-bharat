@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/data/questions.dart';
-import 'package:quiz_app/screens/questions_screen.dart';
-import 'package:quiz_app/screens/results_screen.dart';
-import 'package:quiz_app/screens/start_screen.dart';
+
+
+import 'data/questions.dart';
+import 'screens/questions_screen.dart';
+import 'screens/results_screen.dart';
+import 'screens/start_screen.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -60,18 +62,20 @@ class _QuizState extends State<Quiz> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Color.fromARGB(255, 122, 70, 212),
-                Color.fromARGB(255, 71, 38, 128),
-              ],
+        body: SafeArea(
+          child: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color.fromARGB(255, 122, 70, 212),
+                  Color.fromARGB(255, 71, 38, 128),
+                ],
+              ),
             ),
+            child: screenWidget,
           ),
-          child: screenWidget,
         ),
       ),
     );

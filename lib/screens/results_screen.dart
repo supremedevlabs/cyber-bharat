@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/components/questions_summary.dart';
-import 'package:quiz_app/data/questions.dart';
+
+import '../components/questions_summary.dart';
+import '../data/questions.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
@@ -41,10 +42,10 @@ class ResultsScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               textAlign: TextAlign.center,
               'Call 1930 for reporting cyber / phone callfraud',
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,

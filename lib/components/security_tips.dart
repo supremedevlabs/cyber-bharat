@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quiz_app/models/cyber_crime_model.dart';
+
+import '../models/cyber_crime_model.dart';
 
 class SecurityTips extends StatelessWidget {
   final int index;
@@ -19,7 +20,7 @@ class SecurityTips extends StatelessWidget {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20),
           decoration: BoxDecoration(
-            color: Color(0xff989494),
+            color: const Color(0xff989494),
             border: Border.all(
               width: 2,
               color: Colors.white.withValues(alpha: 0.5),
@@ -27,7 +28,7 @@ class SecurityTips extends StatelessWidget {
             borderRadius: BorderRadius.circular(9),
           ),
           child: ListView.builder(
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             itemCount: tipsToDisplay.length,
             itemBuilder: (context, index) {
