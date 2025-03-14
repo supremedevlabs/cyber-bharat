@@ -12,7 +12,7 @@ class StartScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/images/quiz-logo.png',
+            'assets/images/quiz-logo.jpeg',
             width: 300,
           ),
           const SizedBox(height: 80),
