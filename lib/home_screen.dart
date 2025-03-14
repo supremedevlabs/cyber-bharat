@@ -110,7 +110,7 @@ class _WidgetOneState extends State<WidgetOne>
     return Column(
       children: [
         const SizedBox(height: 45),
-        Text("SUPREME BHARAT",
+        Text("CYBER BHARAT",
             style: GoogleFonts.aboreto(
                 color: Colors.white,
                 fontSize: 20,

@@ -17,7 +17,7 @@ class StartScreen extends StatelessWidget {
           ),
           const SizedBox(height: 80),
           const Text(
-            'Rudra - Be Cyber Safe',
+            'Cyber Bharat - Be Cyber Safe',
             style: TextStyle(
               fontSize: 24,
               color: Colors.white,

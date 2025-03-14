@@ -33,7 +33,7 @@ class ReportScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 45),
-            Text("SUPREME BHARAT",
+            Text("CYBER BHARAT",
                 style: GoogleFonts.aboreto(
                     color: Colors.black,
                     fontSize: 20,
@@ -88,7 +88,7 @@ class ReportScreen extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: "cybercrime.gov.in",
+                          text: "services.india.gov.in",
                           style: GoogleFonts.inter(
                             color: Colors.blue,
                             fontSize: 20,
@@ -96,7 +96,7 @@ class ReportScreen extends StatelessWidget {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () => _launchWebsite(
-                                "https://supremedevlabs.com"),
+                                "https://services.india.gov.in/"),
                         ),
                       ],
                       text: "Online portal: ",
